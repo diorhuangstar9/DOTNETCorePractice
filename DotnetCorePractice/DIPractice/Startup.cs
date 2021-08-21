@@ -29,7 +29,7 @@ namespace DIPractice
             services.AddScoped<ScopedTest1Service>();
             services.AddScoped<ScopedTest2Service>();
             services.AddScoped<ScopedTest3Service>();
-            services.AddScoped<Func<string, IScopedService>>(
+            services.AddScoped<ScopedServiceFactory>(
                 services => type =>
                 {
                     switch (type)
@@ -44,14 +44,17 @@ namespace DIPractice
                     //using (var scope = services.CreateScope())
                     //{
                     //    var scopedServices = scope.ServiceProvider;
-                        
+
                     //}
-                        
+
 
                 });
             services.AddControllers();
             services.AddScoped<TestExecService>();
         }
+
+        
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

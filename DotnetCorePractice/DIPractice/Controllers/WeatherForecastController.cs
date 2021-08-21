@@ -24,7 +24,7 @@ namespace DIPractice.Controllers
         private readonly TestExecService _testExecService;
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger,
-            Func<string, IScopedService> scopedServiceResolver, TestExecService testExecService)
+            ScopedServiceFactory scopedServiceResolver, TestExecService testExecService)
         {
             _logger = logger;
             test1Service = scopedServiceResolver("test1");

@@ -9,7 +9,7 @@ namespace DIPractice.Services
         private readonly IScopedService test2Service;
         private readonly IScopedService test3Service;
 
-        public TestExecService(Func<string, IScopedService> scopedServiceResolver)
+        public TestExecService(ScopedServiceFactory scopedServiceResolver)
         {
             test1Service = scopedServiceResolver("test1");
             test2Service = scopedServiceResolver("test2");

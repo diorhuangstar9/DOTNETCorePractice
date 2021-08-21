@@ -40,5 +40,5 @@ namespace DIPractice.Services
         }
     }
 
-
+    public delegate IScopedService ScopedServiceFactory(string type);
 }
