@@ -26,11 +26,31 @@ namespace DIPractice
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IScopedService, ScopedTest1Service>();
-            services.AddScoped<IScopedService, ScopedTest2Service>();
-            services.AddScoped<IScopedService, ScopedTest3Service>();
-            ServiceCollectionHostedServiceExtension
+            services.AddScoped<ScopedTest1Service>();
+            services.AddScoped<ScopedTest2Service>();
+            services.AddScoped<ScopedTest3Service>();
+            services.AddScoped<Func<string, IScopedService>>(
+                services => type =>
+                {
+                    switch (type)
+                    {
+                        case "test1":
+                            return services.GetRequiredService<ScopedTest1Service>();
+                        case "test2":
+                            return services.GetRequiredService<ScopedTest2Service>();
+                        default:
+                            return services.GetRequiredService<ScopedTest3Service>();
+                    }
+                    //using (var scope = services.CreateScope())
+                    //{
+                    //    var scopedServices = scope.ServiceProvider;
+                        
+                    //}
+                        
+
+                });
             services.AddControllers();
+            services.AddScoped<TestExecService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

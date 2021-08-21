@@ -13,25 +13,30 @@ namespace DIPractice.Services
 
     public class ScopedTest1Service : IScopedService
     {
+        public string ScopeId = Guid.NewGuid().ToString()[^4..];
+
         public string GetScopeId()
         {
-            return $"test1-{Guid.NewGuid().ToString()[^4..]}";
+            return $"test1-{ScopeId}";
         }
     }
 
     public class ScopedTest2Service : IScopedService
     {
+        public string ScopeId = Guid.NewGuid().ToString()[^4..];
+
         public string GetScopeId()
         {
-            return $"test2-{Guid.NewGuid().ToString()[^4..]}";
+            return $"test2-{ScopeId}";
         }
     }
 
     public class ScopedTest3Service : IScopedService
     {
+        public string ScopeId = Guid.NewGuid().ToString()[^4..];
         public string GetScopeId()
         {
-            return $"test3-{Guid.NewGuid().ToString()[^4..]}";
+            return $"test3-{ScopeId}";
         }
     }
 
