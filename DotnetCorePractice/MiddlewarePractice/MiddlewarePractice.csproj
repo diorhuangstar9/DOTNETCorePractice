@@ -5,4 +5,16 @@
   </PropertyGroup>
 
 
+  <ItemGroup>
+    <None Remove="Middleware\" />
+    <None Remove="Test\" />
+    <None Remove="Microsoft.AspNetCore.TestHost" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Middleware\" />
+    <Folder Include="Test\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="3.1.18" />
+  </ItemGroup>
 </Project>

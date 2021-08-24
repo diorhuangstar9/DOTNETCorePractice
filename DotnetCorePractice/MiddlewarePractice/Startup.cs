@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Http;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
+using MiddlewarePractice.Middleware;
 
 namespace MiddlewarePractice
 {
@@ -74,7 +75,7 @@ namespace MiddlewarePractice
             app.UseHsts();
             //app.UseHttpsRedirection();
 
-            app.UseRequestLocalization();
+            //app.UseRequestLocalization();
 
             app.UseRouting();
 
@@ -82,6 +83,7 @@ namespace MiddlewarePractice
 
             //app.UseWhen(context => context.Request.Path.Value.StartsWith("weatherforecast"),
             //    appBuilder => HandleLocale(appBuilder));
+            app.UseRequestCulture();
 
             app.UseEndpoints(endpoints =>
             {

@@ -31,7 +31,7 @@ namespace MiddlewarePractice.Controllers
             //HttpContext.Items.TryGetValue("locale", out object objLocale);
             //var locale = objLocale?.ToString() ?? string.Empty;
             var culture = CultureInfo.CurrentCulture;
-            Console.WriteLine($"locale: {culture}");
+            Console.WriteLine($"culture: {culture}");
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
