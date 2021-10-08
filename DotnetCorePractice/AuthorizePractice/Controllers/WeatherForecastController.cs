@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using AuthorizePractice.Authorize;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -10,6 +11,7 @@ namespace AuthorizePractice.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Authorize(Policy = "TestPolicy")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -25,6 +27,7 @@ namespace AuthorizePractice.Controllers
         }
 
         [HttpGet]
+        //[Authorize(Policy = "TestPolicy")]
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();
@@ -38,8 +41,21 @@ namespace AuthorizePractice.Controllers
         }
 
         [HttpGet("{detailId:int}")]
-        [Authorize(Policy = "TestPolicy")]
+        [Test2Authorize(9)]
         public WeatherForecast GetDetail(int detailId)
+        {
+            var rng = new Random();
+            return new WeatherForecast
+            {
+                Date = DateTime.Now.AddDays(detailId),
+                TemperatureC = rng.Next(-20, 55),
+                Summary = Summaries[rng.Next(Summaries.Length)]
+            };
+        }
+
+        [HttpGet("GetDetail2/{detailId:int}")]
+        [Authorize(Policy = "TestPolicy2")]
+        public WeatherForecast GetDetail2(int detailId)
         {
             var rng = new Random();
             return new WeatherForecast

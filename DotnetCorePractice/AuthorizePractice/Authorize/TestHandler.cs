@@ -13,15 +13,19 @@ namespace AuthorizePractice.Authorize
         protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, TestRequirement requirement)
         {
             //Console.WriteLine(context.Resource.GetType());
-            //if (context.Resource is Microsoft.AspNetCore.Routing.RouteEndpoint routeEndpoint)
-            //{
-            //    //var endpoint = httpContext.GetEndpoint();
-            //    //var actionDescriptor = routeEndpoint.Metadata.GetMetadata<ControllerActionDescriptor>();
+            if (context.Resource is Microsoft.AspNetCore.Routing.RouteEndpoint routeEndpoint)
+            {
+                var actionDescriptor = routeEndpoint.Metadata.GetMetadata<ControllerActionDescriptor>();
+                var attributes = actionDescriptor?.MethodInfo.GetCustomAttributes(typeof(Test2AuthorizeAttribute), false)
+                    .Cast<Test2AuthorizeAttribute>();
+                var testVal = attributes.FirstOrDefault()?.TestVal;
+                Console.WriteLine($"Attribute value:{testVal}");
 
-            //    context.Succeed(requirement);
-            //}
+            }
             Console.WriteLine($"TestRequirement value:{requirement.TestNum}");
+
             //context.Fail();
+            context.Succeed(requirement);
             return Task.CompletedTask;
         }
     }

@@ -39,12 +39,17 @@ namespace AuthorizePractice
                 options.AddPolicy("TestPolicy", policy =>
                 {
                     policy.Requirements.Add(new TestRequirement(2));
-                    policy.Requirements.Add(new TestRequirement2(5));
-
                 });
+                //options.AddPolicy("TestPolicy2", policy =>
+                //{
+                //    policy.Requirements.Add(new TestRequirement2(5));
+
+                //});
             });
+            //services.AddSingleton<IAuthorizationPolicyProvider, TestPolicyProvider>();
             services.AddSingleton<IAuthorizationHandler, TestHandler>();
-            services.AddSingleton<IAuthorizationHandler, TestHandler2>();
+
+            //services.AddSingleton<IAuthorizationHandler, TestHandler2>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
