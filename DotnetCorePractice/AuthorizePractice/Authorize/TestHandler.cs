@@ -8,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace AuthorizePractice.Authorize
 {
-    public class TestHandler : AuthorizationHandler<TestRequirement>
+    public class TestHandler : AuthorizationHandler<TestRequirement, Test2AuthorizeAttribute>
     {
-        protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, TestRequirement requirement)
+        protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, TestRequirement requirement, 
+            Test2AuthorizeAttribute resource)
         {
             //Console.WriteLine(context.Resource.GetType());
             if (context.Resource is Microsoft.AspNetCore.Routing.RouteEndpoint routeEndpoint)
@@ -28,5 +29,6 @@ namespace AuthorizePractice.Authorize
             context.Succeed(requirement);
             return Task.CompletedTask;
         }
+
     }
 }
