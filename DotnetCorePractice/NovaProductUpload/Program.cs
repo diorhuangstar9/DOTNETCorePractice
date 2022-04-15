@@ -15,7 +15,13 @@ namespace NovaProductUpload
     {
         static async Task Main(string[] args)
         {
-            var env = "SIT";
+            if (!args[0].StartsWith("env="))
+            {
+                Console.WriteLine("Wrong parameter, need parameter:env={env}");
+                return;
+            }
+            var env = args[0].Replace("env=", string.Empty);
+            Console.WriteLine($"env is {env}");
             var needToOnshelf = true;
             var endpointToReplace = env.Equals("PRD", StringComparison.OrdinalIgnoreCase) ?
                 "https://vn-api-ApiToReplace.ysd.com" : $"https://vn-api-ApiToReplace-{env.ToLower()}.ysd.com";
@@ -70,7 +76,7 @@ namespace NovaProductUpload
             if (postResults.Count > 0 && needToOnshelf)
             {
                 Console.WriteLine("Waiting for Product Sync To Manufacture");
-                Thread.Sleep(5000);
+                Thread.Sleep(3000 * postResults.Count);
                 Console.WriteLine("Onshelf Product Start");
                 for (var i = 0; i < postResults.Count; i++)
                 {
@@ -120,7 +126,7 @@ namespace NovaProductUpload
         private static async Task OnShelfProuctAsync(string endpoint, string token, int productId)
         {
             var restClient = new RestClient(endpoint);
-            var request = new RestRequest("/api/Product/OnShelfBatch", Method.Post);
+            var request = new RestRequest("/api/Product/Product/OnShelfBatch", Method.Post);
             request.AddHeader("Authorization", $"Bearer {token}");
             request.AddJsonBody(new { productBriefIds = new int[] { productId } });
             var response = await restClient.ExecuteAsync<NovaResult<bool>>(request);
