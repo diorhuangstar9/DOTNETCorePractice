@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizePractice", "Author
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorDiffTest", "ColorDiffTest\ColorDiffTest.csproj", "{2F2AF686-973D-477A-B906-01824242289F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovaProductUpload", "NovaProductUpload\NovaProductUpload.csproj", "{5FD37F11-7588-4086-9236-CA11C009FF72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{52F5011B-E4EF-4ADE-9947-A0B2750D8C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52F5011B-E4EF-4ADE-9947-A0B2750D8C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52F5011B-E4EF-4ADE-9947-A0B2750D8C64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FD37F11-7588-4086-9236-CA11C009FF72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FD37F11-7588-4086-9236-CA11C009FF72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FD37F11-7588-4086-9236-CA11C009FF72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FD37F11-7588-4086-9236-CA11C009FF72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
