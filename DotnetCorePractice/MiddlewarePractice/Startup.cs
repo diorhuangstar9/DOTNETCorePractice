@@ -42,11 +42,11 @@ namespace MiddlewarePractice
                 options.SupportedCultures = supportedCultures;
                 options.SupportedUICultures = supportedCultures;
 
-                options.AddInitialRequestCultureProvider(new CustomRequestCultureProvider(async context =>
+                options.AddInitialRequestCultureProvider(new CustomRequestCultureProvider(context =>
                 {
                     // My custom request culture logic
                     var locale = context.Request.Path.Value.Replace("/weatherforecast/", string.Empty);
-                    return new ProviderCultureResult(locale);
+                    return Task.FromResult(new ProviderCultureResult(locale));
                 }));
             });
             services.AddControllers();
