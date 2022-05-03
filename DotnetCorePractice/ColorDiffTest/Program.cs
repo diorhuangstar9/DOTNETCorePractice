@@ -34,6 +34,8 @@ namespace ColorDiffTest
             //double difference = differenceCalculator.ComputeDifference(in labColor1, in labColor2); // 69.7388
             //Console.WriteLine($"diff:{difference}");
 
+//docker run -d --hostname my-rabbit --name ecomm-rabbit -p 15672:15672 -p 5672:5672 rabbitmq:3-management
+
             /*
              * 
              * {

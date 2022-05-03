@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorDiffTest", "ColorDiffT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovaProductUpload", "NovaProductUpload\NovaProductUpload.csproj", "{5FD37F11-7588-4086-9236-CA11C009FF72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.Producer", "RabbitMQ.Producer\RabbitMQ.Producer.csproj", "{2D484362-D318-450A-A7FC-754258F7DE11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.Consumer", "RabbitMQ.Consumer\RabbitMQ.Consumer.csproj", "{03E5360E-F815-4507-AF1D-B9FF88303937}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{5FD37F11-7588-4086-9236-CA11C009FF72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FD37F11-7588-4086-9236-CA11C009FF72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FD37F11-7588-4086-9236-CA11C009FF72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D484362-D318-450A-A7FC-754258F7DE11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D484362-D318-450A-A7FC-754258F7DE11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D484362-D318-450A-A7FC-754258F7DE11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D484362-D318-450A-A7FC-754258F7DE11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03E5360E-F815-4507-AF1D-B9FF88303937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03E5360E-F815-4507-AF1D-B9FF88303937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03E5360E-F815-4507-AF1D-B9FF88303937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03E5360E-F815-4507-AF1D-B9FF88303937}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
