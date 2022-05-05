@@ -17,4 +17,8 @@ using var channel = connection.CreateModel();
 
 //channel.BasicPublish("", "demo-queue", null, body);
 //MyQueueProducer.Publish(channel);
-PubSubProducer.Publish(channel);
+//PubSubProducer.Publish(channel);
+//TopicProducer.Publish(channel);
+MQServer.Publish(channel);
+
+Console.ReadLine();

@@ -23,6 +23,14 @@ using var channel = connection.CreateModel();
 
 //channel.BasicConsume("demo-queue", true, consumer);
 //RabbitMQ.Consumer.MyQueueConsumer.Consume(channel);
-Console.WriteLine("Consuming");
-PubsubConsumer.Consume(channel);
+//Console.WriteLine("Consuming");
+
+//if ("Payments".Equals(args[0], StringComparison.OrdinalIgnoreCase))
+//    PaymentsConsumer.Consume(channel);
+//else if ("Analytics".Equals(args[0], StringComparison.OrdinalIgnoreCase))
+//    AnalyticsConsumer.Consume(channel);
+//else if ("User".Equals(args[0], StringComparison.OrdinalIgnoreCase))
+//    UserConsumer.Consume(channel);
+
+MQClient.Consume(channel);
 Console.ReadLine();
