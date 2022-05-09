@@ -19,6 +19,8 @@ using var channel = connection.CreateModel();
 //MyQueueProducer.Publish(channel);
 //PubSubProducer.Publish(channel);
 //TopicProducer.Publish(channel);
-MQServer.Publish(channel);
+//MQServer.Publish(channel);
+//ExchangeToExchangeProducer.Publish(channel);
+ConsistentHashingExchangeProducer.Publish(channel);
 
-Console.ReadLine();
+//Console.ReadLine();

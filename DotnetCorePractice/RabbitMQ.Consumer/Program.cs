@@ -32,5 +32,8 @@ using var channel = connection.CreateModel();
 //else if ("User".Equals(args[0], StringComparison.OrdinalIgnoreCase))
 //    UserConsumer.Consume(channel);
 
-MQClient.Consume(channel);
+//MQClient.Consume(channel);
+//ExchangeToExchangeConsumer.Consume(channel);
+ConsistentHashingExchangeConsumer.Consume(channel);
+
 Console.ReadLine();
