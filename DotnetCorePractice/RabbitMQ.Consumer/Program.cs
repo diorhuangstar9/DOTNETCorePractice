@@ -34,6 +34,9 @@ using var channel = connection.CreateModel();
 
 //MQClient.Consume(channel);
 //ExchangeToExchangeConsumer.Consume(channel);
-ConsistentHashingExchangeConsumer.Consume(channel);
+//ConsistentHashingExchangeConsumer.Consume(channel);
+//AltExchnageConsumer.Consume(channel);
+//DLXConsumer.Consume(channel);
+AcceptRejectConsumer.Consume(channel);
 
 Console.ReadLine();

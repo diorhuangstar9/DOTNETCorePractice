@@ -21,6 +21,9 @@ using var channel = connection.CreateModel();
 //TopicProducer.Publish(channel);
 //MQServer.Publish(channel);
 //ExchangeToExchangeProducer.Publish(channel);
-ConsistentHashingExchangeProducer.Publish(channel);
+//ConsistentHashingExchangeProducer.Publish(channel);
+//AlterExchangeProducer.Publish(channel);
+//DLXProducer.Publish(channel);
+AcceptRejectProducer.Publish(channel);
 
 //Console.ReadLine();
