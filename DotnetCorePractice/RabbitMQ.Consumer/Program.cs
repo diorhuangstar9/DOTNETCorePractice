@@ -37,6 +37,7 @@ using var channel = connection.CreateModel();
 //ConsistentHashingExchangeConsumer.Consume(channel);
 //AltExchnageConsumer.Consume(channel);
 //DLXConsumer.Consume(channel);
-AcceptRejectConsumer.Consume(channel);
+//AcceptRejectConsumer.Consume(channel);
+AzureServiceBusClient.Consume();
 
 Console.ReadLine();

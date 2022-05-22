@@ -10,9 +10,11 @@
   <ItemGroup>
     <None Remove="RabbitMQ.Client" />
     <None Remove="Newtonsoft.Json" />
+    <None Remove="Microsoft.Azure.ServiceBus" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="RabbitMQ.Client" Version="6.2.4" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Microsoft.Azure.ServiceBus" Version="5.2.0" />
   </ItemGroup>
 </Project>

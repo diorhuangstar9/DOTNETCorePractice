@@ -30,11 +30,11 @@ namespace ColorDiffTest
             Console.WriteLine(labColor1.ToString());
             Console.WriteLine(labColor2.ToString());
 
-            //var differenceCalculator = new CIEDE2000ColorDifference();
-            //double difference = differenceCalculator.ComputeDifference(in labColor1, in labColor2); // 69.7388
-            //Console.WriteLine($"diff:{difference}");
+            var differenceCalculator = new CIEDE2000ColorDifference();
+            double difference = differenceCalculator.ComputeDifference(in labColor1, in labColor2); // 69.7388
+                                                                                                    //Console.WriteLine($"diff:{difference}");
 
-//docker run -d --hostname my-rabbit --name ecomm-rabbit -p 15672:15672 -p 5672:5672 rabbitmq:3-management
+            //docker run -d --hostname my-rabbit --name ecomm-rabbit -p 15672:15672 -p 5672:5672 rabbitmq:3-management
 
             /*
              * 

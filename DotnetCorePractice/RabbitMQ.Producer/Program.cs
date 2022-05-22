@@ -24,6 +24,7 @@ using var channel = connection.CreateModel();
 //ConsistentHashingExchangeProducer.Publish(channel);
 //AlterExchangeProducer.Publish(channel);
 //DLXProducer.Publish(channel);
-AcceptRejectProducer.Publish(channel);
+//AcceptRejectProducer.Publish(channel);
+AzureServiceBusProducer.Produce();
 
 //Console.ReadLine();
