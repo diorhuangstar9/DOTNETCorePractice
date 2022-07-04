@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBus.Producer", "Serv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBus.Consumer", "ServiceBus.Consumer\ServiceBus.Consumer.csproj", "{290107EC-8EE2-49F3-B6A9-E2D5F050F5A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicePractice1", "MicroservicePractice1\MicroservicePractice1.csproj", "{F0EDAACA-3D9E-4915-9E99-0DA5E0811EA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroservicePractice2", "MicroservicePractice2\MicroservicePractice2.csproj", "{500E8220-C339-43A6-AFE5-D47AB1A1A9D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,14 @@ Global
 		{290107EC-8EE2-49F3-B6A9-E2D5F050F5A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{290107EC-8EE2-49F3-B6A9-E2D5F050F5A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{290107EC-8EE2-49F3-B6A9-E2D5F050F5A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0EDAACA-3D9E-4915-9E99-0DA5E0811EA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0EDAACA-3D9E-4915-9E99-0DA5E0811EA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0EDAACA-3D9E-4915-9E99-0DA5E0811EA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0EDAACA-3D9E-4915-9E99-0DA5E0811EA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{500E8220-C339-43A6-AFE5-D47AB1A1A9D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{500E8220-C339-43A6-AFE5-D47AB1A1A9D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{500E8220-C339-43A6-AFE5-D47AB1A1A9D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{500E8220-C339-43A6-AFE5-D47AB1A1A9D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
