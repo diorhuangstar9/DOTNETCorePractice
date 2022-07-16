@@ -1,5 +1,6 @@
 using MicroservicePractice1.ServiceClients;
 using Microsoft.AspNetCore.Mvc;
+using Polly.CircuitBreaker;
 
 namespace MicroservicePractice1.Controllers;
 
@@ -36,8 +37,21 @@ public class WeatherForecastController : ControllerBase
     [HttpGet("GetTestServiceItem")]
     public async Task<string> GetTestServiceItem()
     {
-        return await _testServiceClient.GetTestServiceItem();
+        string result;
+        try
+        {
+            result = await _testServiceClient.GetTestServiceItem();
+        }
+        catch (BrokenCircuitException e)
+        {
+            result = HandleBrokenCircuitException();
+        }
+        return result;
     }
-
+    
+    private string HandleBrokenCircuitException()
+    {
+        return "Microservice is inoperative, please try later on. (Business message due to Circuit-Breaker)";
+    }
 
 }

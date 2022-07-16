@@ -2,7 +2,7 @@ namespace MicroservicePractice1.ServiceClients;
 
 public class HttpTestServiceClient : ITestServiceClient
 {
-    private HttpClient _httpClient;   
+    private HttpClient _httpClient = new HttpClient();   
     
     public HttpTestServiceClient(HttpClient httpClient)
     {
